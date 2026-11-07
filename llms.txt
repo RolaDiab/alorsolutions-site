@@ -1,0 +1,16 @@
+# Alor Solutions
+
+> Executive development and leadership strategy firm helping executives and their teams perform at their highest level through leadership strategy, operational process design, and strategic communications that build market authority.
+
+Founded by Rola Diab, Alor Solutions works with executives, founders, and senior leadership teams across technology, finance, healthcare, and professional services. The methodology—the Conviction Code—addresses the belief systems and mental models that drive sustained behavior change.
+
+## Pages
+
+- [Home](/): Overview of services, approach, press, testimonials, and FAQ.
+- [Services](/#services): Leadership strategy, operational process design, and strategic communications.
+- [Approach](/#approach): The Conviction Code methodology.
+- [About](/#about): About Rola Diab and Alor Solutions.
+- [Press & Media](/#press): Media features and speaking engagements.
+- [Testimonials](/#testimonials): Client outcomes and feedback.
+- [FAQ](/#faq): Common questions from executives evaluating a performance partner.
+- [Contact](/#contact): Schedule a consultation.
