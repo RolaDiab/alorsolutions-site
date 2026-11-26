@@ -1,0 +1,88 @@
+/* AI Data Funding pages. Alor Solutions brand, matching alorsolutions.com (src/index.css). */
+:root {
+  --blue: #0F2544;      /* Alor navy */
+  --gold: #EFC14D;      /* Alor gold */
+  --gold-text: #BA8C0D; /* Alor gold-dark, for gold text on light backgrounds */
+  --ink: #0F2544;
+  --muted: #5B5B67;
+  --page: #F6F3EF;      /* Alor cream */
+  --card: #FFFFFF;
+  --line: #E4E1DA;
+  --err: #B3261E;
+  --serif: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.7 var(--sans); }
+.band { background: var(--blue); padding: 22px max(16px, env(safe-area-inset-right, 0px)) 22px max(16px, env(safe-area-inset-left, 0px)); text-align: center; }
+.wordmark { font: 600 18px var(--serif); letter-spacing: 6px; color: var(--gold); text-decoration: none; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 40px max(16px, env(safe-area-inset-right, 0px)) 56px max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 28px; }
+.wrap.narrow { max-width: 640px; }
+h1, h2 { font-family: var(--serif); color: var(--blue); text-wrap: balance; margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.2; text-align: center; }
+h1 em { color: var(--gold-text); font-style: normal; }
+h2 { font-size: 26px; line-height: 1.3; }
+.intro { display: grid; gap: 10px; }
+.lede { text-align: center; max-width: 60ch; margin: 0 auto; color: var(--muted); }
+.video { width: 100%; max-width: 100%; border-radius: 18px; background: var(--blue); display: block; aspect-ratio: 16 / 9; }
+.video.v { display: none; aspect-ratio: 9 / 16; max-width: 360px; margin: 0 auto; }
+@media (max-width: 560px) { .video.h { display: none; } .video.v { display: block; } }
+.cta-row, .cta-col { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.btn { display: inline-block; background: var(--blue); color: var(--gold); font: bold 17px var(--sans); text-decoration: none; padding: 14px 30px; border-radius: 999px; border: 0; cursor: pointer; text-align: center; }
+.btn.alt { background: var(--card); color: var(--blue); border: 2px solid var(--blue); }
+.btn:focus-visible, .ghost:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--gold-text); outline-offset: 2px; }
+.ghost { background: none; border: 0; color: var(--blue); font: bold 16px var(--sans); cursor: pointer; padding: 12px 8px; }
+.fine { font-size: 13px; color: var(--muted); text-align: center; margin: 0; }
+.fine.left { text-align: left; }
+.fine a, .card a:not(.btn) { color: var(--blue); font-weight: bold; text-decoration: none; }
+.card { background: var(--card); border-radius: 18px; padding: 28px; display: grid; gap: 14px; }
+.card p { margin: 0; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; counter-increment: s; }
+.steps li::before { content: counter(s); width: 40px; height: 40px; border-radius: 999px; background: var(--blue); color: var(--gold); font: bold 18px/40px var(--serif); text-align: center; }
+.steps b, .ticks b { color: var(--blue); }
+.ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ticks li { padding-left: 28px; position: relative; }
+.ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-text); font-weight: bold; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; font-size: 15px; color: var(--blue); font-weight: bold; }
+.value { text-align: center; }
+.value .big { font: 40px/1.1 var(--serif); color: var(--gold-text); }
+details { border-top: 1px solid var(--line); padding-top: 12px; }
+details:first-of-type { border-top: 0; padding-top: 0; }
+summary { cursor: pointer; font-weight: bold; color: var(--blue); }
+details p { margin-top: 8px; }
+.faq-head { display: grid; gap: 10px; text-align: center; padding-top: 12px; }
+.group { margin: 0; font: 20px/1.3 var(--serif); color: var(--gold-text); }
+
+/* Questionnaire */
+.progress { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
+.progress li { border-top: 4px solid var(--line); padding-top: 6px; }
+.progress li.on { border-color: var(--blue); color: var(--blue); font-weight: bold; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 18px; min-width: 0; }
+legend { font: 24px/1.3 var(--serif); color: var(--blue); padding: 0; margin-bottom: 6px; }
+label { display: grid; gap: 6px; font-weight: bold; color: var(--ink); min-width: 0; }
+.hint { font-weight: normal; font-size: 14px; color: var(--muted); line-height: 1.5; }
+input:not([type=radio]):not([type=checkbox]), select, textarea { font: 16px var(--sans); color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 11px 12px; width: 100%; min-width: 0; }
+textarea { resize: vertical; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .row2 { grid-template-columns: 1fr; } }
+.q { display: grid; gap: 8px; }
+.ql { font-weight: bold; margin: 0; }
+.opt { display: flex; gap: 10px; align-items: flex-start; font-weight: normal; cursor: pointer; }
+.opt input { margin-top: 5px; accent-color: var(--blue); width: 18px; height: 18px; flex: none; }
+.checks { display: grid; gap: 8px; }
+.consent { line-height: 1.6; }
+.note { color: var(--muted); }
+.manifest { display: grid; gap: 12px; background: var(--page); border-radius: 12px; padding: 16px; }
+.mrow { display: grid; grid-template-columns: 1fr 120px 1fr; gap: 10px; align-items: end; }
+.mrow .mname { grid-column: 1 / -1; margin: 0; color: var(--blue); font-weight: bold; }
+.mrow label { font-weight: normal; font-size: 14px; }
+@media (max-width: 560px) { .mrow { grid-template-columns: 1fr; } }
+.nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.nav .btn { margin-left: auto; }
+.err { color: var(--err); font-weight: bold; margin: 0; }
+.result { text-align: left; }
+.result h2 { text-align: center; }

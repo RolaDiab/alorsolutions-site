@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Data Funding Qualifier | Alor Solutions</title>
+<meta name="description" content="A 3-minute questionnaire to see whether your company's data may qualify for AI data licensing.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="../dl.css">
+</head>
+<body>
+<header class="band"><a class="wordmark" href="../">ALOR SOLUTIONS</a></header>
+
+<main class="wrap narrow">
+  <div class="intro">
+    <h1>See if your company qualifies</h1>
+    <p class="lede">About 3 minutes. We only ask about the kinds of records you keep. Never send us files or customer data.</p>
+  </div>
+
+  <ol class="progress" aria-label="Progress">
+    <li data-step="1" class="on">You</li><li data-step="2">Company</li><li data-step="3">Systems</li><li data-step="4">Privacy</li><li data-step="5">Consent</li>
+  </ol>
+
+  <form id="q" class="card" novalidate>
+    <!-- Step 1 -->
+    <fieldset data-step="1">
+      <legend>About you</legend>
+      <div class="row2">
+        <label>First name<input id="first_name" name="first_name" required autocomplete="given-name"></label>
+        <label>Last name<input id="last_name" name="last_name" required autocomplete="family-name"></label>
+      </div>
+      <label>Job title<input id="title" name="title" required autocomplete="organization-title"></label>
+      <label>Work email<input id="email" name="email" type="email" required autocomplete="email"></label>
+      <label>Phone<input id="phone" name="phone" type="tel" required autocomplete="tel"></label>
+      <div class="q">
+        <p class="ql">Are you authorized to explore commercial agreements for your company?</p>
+        <label class="opt"><input type="radio" name="authorized" value="Yes" required> Yes</label>
+        <label class="opt"><input type="radio" name="authorized" value="Need approval"> I'd need approval from someone else</label>
+        <label class="opt"><input type="radio" name="authorized" value="No"> No</label>
+      </div>
+    </fieldset>
+
+    <!-- Step 2 -->
+    <fieldset data-step="2" hidden>
+      <legend>Your company</legend>
+      <label>Company name<input id="company_name" name="company_name" required autocomplete="organization"></label>
+      <label>Website<input id="website" name="website" type="url" placeholder="https://" autocomplete="url"></label>
+      <label>Country and state or province<input id="location" name="location" required></label>
+      <label>Industry
+        <select id="industry" name="industry" required>
+          <option value="">Choose one</option>
+          <option>Law firm</option><option>Accounting / CPA</option><option>Healthcare</option><option>Energy</option><option>Engineering</option>
+          <option>Professional services</option><option>Software / technology</option><option>Finance / insurance</option><option>Real estate</option>
+          <option>Logistics / operations</option><option>Manufacturing</option><option>Marketing / agency</option><option>Recruiting / HR</option>
+          <option>Nonprofit</option><option>Other</option>
+        </select>
+      </label>
+      <div class="q">
+        <p class="ql">Is the company currently operating?</p>
+        <label class="opt"><input type="radio" name="status" value="Operating" required> Yes, operating</label>
+        <label class="opt"><input type="radio" name="status" value="Closed"> No, it has closed or stopped trading</label>
+      </div>
+      <label>Desk staff on payroll
+        <span class="hint">People who work at a computer in your offices or remotely. Not field, warehouse or frontline staff. Contractors count only if they work inside your company's email and workspace accounts.</span>
+        <select id="desk_staff" name="desk_staff" required>
+          <option value="">Choose one</option>
+          <option value="3">Under 6</option><option value="6">6 to 9</option><option value="10">10 to 19</option><option value="20">20 to 34</option>
+          <option value="35">35 to 49</option><option value="50">50 to 75</option><option value="76">76 to 200</option><option value="201">Over 200</option>
+        </select>
+      </label>
+      <label>How long have you used your main business software?
+        <select id="years" name="years" required>
+          <option value="">Choose one</option>
+          <option value="1">Under 3 years</option><option value="3">3 to 5 years</option><option value="5">5 to 10 years</option><option value="10">Over 10 years</option>
+        </select>
+      </label>
+      <div class="q">
+        <p class="ql">If asked, could you show your headcount? <span class="hint">For example a Google Workspace or Microsoft 365 admin screenshot, or a payroll export. Don't send it now.</span></p>
+        <label class="opt"><input type="radio" name="headcount_proof" value="Yes" required> Yes</label>
+        <label class="opt"><input type="radio" name="headcount_proof" value="Not sure"> Not sure</label>
+      </div>
+    </fieldset>
+
+    <!-- Step 3 -->
+    <fieldset data-step="3" hidden>
+      <legend>Your systems</legend>
+      <p class="ql">Which of these does your team use? Tick all that apply.</p>
+      <div class="checks" id="systems">
+        <label class="opt"><input type="checkbox" name="systems" value="Email"> Email (Gmail, Outlook)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Team chat"> Team chat (Slack, Teams)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Meeting recordings"> Meeting recordings (Zoom, Fireflies, Otter)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="CRM"> CRM (HubSpot, Salesforce)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Help desk"> Help desk (Zendesk, Intercom)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Project boards"> Project boards (Asana, Trello, Monday, Jira)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Docs and wiki"> Docs or wiki (Notion, Confluence, Google Drive)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Billing and accounting"> Billing or accounting (Stripe, QuickBooks, Xero)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="Industry software"> Industry software (practice management, EHR, CAD)</label>
+        <label class="opt"><input type="checkbox" name="systems" value="SOPs and playbooks"> Written SOPs, playbooks or checklists</label>
+      </div>
+      <div id="manifest" class="manifest" hidden>
+        <p class="ql">For each one, name the tool and roughly how much is in it. Rough guesses are fine.</p>
+        <div id="manifest_rows"></div>
+      </div>
+      <div class="q">
+        <p class="ql">Is your data in company-owned accounts?</p>
+        <label class="opt"><input type="radio" name="accounts" value="Company accounts" required> Yes, one company domain (Google Workspace or Microsoft 365)</label>
+        <label class="opt"><input type="radio" name="accounts" value="Mixed"> Mixed</label>
+        <label class="opt"><input type="radio" name="accounts" value="Mostly personal"> Mostly personal accounts</label>
+      </div>
+      <label>Describe one everyday task that moves across several tools
+        <span class="hint">For example: a client request comes in by email, someone replies, updates the CRM, then sends an invoice.</span>
+        <textarea id="workflow" name="workflow" rows="3"></textarea>
+      </label>
+    </fieldset>
+
+    <!-- Step 4 -->
+    <fieldset data-step="4" hidden>
+      <legend>Privacy and constraints</legend>
+      <p class="note">None of these rule you out. They tell us what will need extra care.</p>
+      <p class="ql">Do your records include any of these? Tick all that apply.</p>
+      <div class="checks">
+        <label class="opt"><input type="checkbox" name="sensitive" value="Patient health information"> Patient health information</label>
+        <label class="opt"><input type="checkbox" name="sensitive" value="Legal client files or privileged material"> Legal client files or privileged material</label>
+        <label class="opt"><input type="checkbox" name="sensitive" value="Financial account data"> Financial account data</label>
+        <label class="opt"><input type="checkbox" name="sensitive" value="Data about children"> Data about children</label>
+        <label class="opt"><input type="checkbox" name="sensitive" value="None of these" id="sens_none"> None of these</label>
+      </div>
+      <div class="q">
+        <p class="ql">Do client contracts, NDAs or engagement letters limit how you can use client information?</p>
+        <label class="opt"><input type="radio" name="contract_limits" value="Yes" required> Yes</label>
+        <label class="opt"><input type="radio" name="contract_limits" value="No"> No</label>
+        <label class="opt"><input type="radio" name="contract_limits" value="Not sure"> Not sure</label>
+      </div>
+      <div class="q">
+        <p class="ql">Has anyone already introduced you to an AI data licensing company or program?</p>
+        <label class="opt"><input type="radio" name="already_introduced" value="No" required> No</label>
+        <label class="opt"><input type="radio" name="already_introduced" value="Yes"> Yes</label>
+      </div>
+      <label>Anything that would be off-limits for you? <span class="hint">Optional. For example trade secrets, team chats, or one client's work.</span>
+        <textarea id="off_limits" name="off_limits" rows="2"></textarea>
+      </label>
+    </fieldset>
+
+    <!-- Step 5 -->
+    <fieldset data-step="5" hidden>
+      <legend>Consent</legend>
+      <label class="opt consent"><input type="checkbox" id="consent_intro" name="consent_intro" required> I agree that Alor Solutions may submit my company to its licensed partners and share the details in this form so they can contact me about this opportunity.</label>
+      <label class="opt consent"><input type="checkbox" id="consent_terms" name="consent_terms" required> I understand there's no cost or obligation, and that no offer or payment is guaranteed. Buyers decide eligibility and terms.</label>
+      <p class="fine left">We never ask for your business data. Your answers are used only to assess fit and make the introduction. See our <a href="https://roladiab.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+    </fieldset>
+
+    <p class="err" id="err" role="alert" hidden></p>
+    <div class="nav">
+      <button type="button" class="ghost" id="back" hidden>Back</button>
+      <button type="button" class="btn" id="next">Continue</button>
+    </div>
+  </form>
+
+  <!-- Results -->
+  <section id="r_qualified" class="card result" hidden>
+    <h2>Good news: your company pre-qualifies.</h2>
+    <p>Based on your answers, your company meets our licensed partners' current criteria. Here's what happens next:</p>
+    <ol class="steps">
+      <li><div><b>We submit your company.</b> Within one business day, Alor submits you to our licensed partners. There's nothing else for you to fill in.</div></li>
+      <li><div><b>They book your discovery call.</b> Our partner contacts you directly to schedule a short call about your systems. No data, no logins, no commitment.</div></li>
+      <li><div><b>You decide.</b> You see your offers and choose. Nothing is shared and nothing is signed without your approval.</div></li>
+    </ol>
+    <p class="fine">We've emailed you a copy of these next steps. No offer or payment is guaranteed. Buyers decide eligibility and terms.</p>
+  </section>
+
+  <section id="r_review" class="card result" hidden>
+    <h2>Thanks. We need a quick conversation first.</h2>
+    <p id="review_reason">One or two of your answers need a closer look before we can make an introduction.</p>
+    <p>We'll email you within one business day to sort it out.</p>
+  </section>
+
+  <section id="r_not" class="card result" hidden>
+    <h2>Thanks for checking.</h2>
+    <p>Based on your answers, your company doesn't meet the current criteria. These change as buyers' needs change, so we'll keep your details and let you know if that happens.</p>
+    <p>Usually companies qualify with 20+ desk staff, 3+ years of records and 5+ software tools. Law and accounting firms, healthcare, energy and engineering can qualify with smaller teams.</p>
+    <p class="fine"><a href="../">Back to the overview</a></p>
+  </section>
+</main>
+
+<script src="qualify.js"></script>
+</body>
+</html>

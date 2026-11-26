@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // GitHub Pages paths are case-sensitive. Send /aidatafunding, /AIDATAFUNDING etc. to /AIdataFunding/.
+      (function () {
+        var p = location.pathname, m = p.match(/^\/aidatafunding(\/.*)?$/i);
+        if (m && p.indexOf("/AIdataFunding") !== 0) location.replace("/AIdataFunding" + (m[1] || "/") + location.search + location.hash);
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
